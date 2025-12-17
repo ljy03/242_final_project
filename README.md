@@ -12,9 +12,9 @@ This project implements a complete workflow for IMDb sentiment analysis using TF
 │   ├── data_processing.py        # Data loading and text cleaning
 │   ├── feature_extraction.py     # TF-IDF feature extraction
 │   └── baseline_model.py         # Baseline model training and evaluation
-├── outputs/
-│   ├── clean_reviews.csv         # Cleaned dataset (output)
-│   └── tfidf_features.pkl         # TF-IDF feature matrices (output)
+├── outputs/                       # Generated outputs (not in repo, run main.py to create)
+│   ├── clean_reviews.csv         # Cleaned dataset (generated)
+│   └── tfidf_features.pkl         # TF-IDF feature matrices (generated)
 ├── main.py                       # Main workflow script
 ├── requirements.txt              # Python dependencies
 └── README.md                     # This file
@@ -42,6 +42,8 @@ pip install -r requirements.txt
 
 2. Ensure the IMDb dataset zip archive `imdb_dataset.zip` is in the `data/` directory.
 
+3. **Generate outputs**: Run `python main.py` to generate the output files (they are not included in the repository).
+
    The zip archive should contain:
    - A CSV file (e.g., `IMDB Dataset.csv`) with:
      - A column with review text (named 'review', 'text', or 'comment')
@@ -49,12 +51,18 @@ pip install -r requirements.txt
 
 ## Usage
 
+**Important**: Output files (`outputs/clean_reviews.csv` and `outputs/tfidf_features.pkl`) are **not included** in this repository (they are excluded via `.gitignore` due to file size limits). You must run `main.py` first to generate these files.
+
 Run the main workflow:
 ```bash
 python main.py
 ```
 
+This will generate all output files in the `outputs/` directory.
+
 ## Outputs
+
+After running `main.py`, the following files will be generated in the `outputs/` directory:
 
 - **clean_reviews.csv**: Cleaned dataset with original and cleaned review columns
 - **tfidf_features.pkl**: Pickle file containing:
@@ -62,6 +70,8 @@ python main.py
   - `X_val`: Validation TF-IDF features
   - `X_test`: Test TF-IDF features
   - `vectorizer`: Fitted TF-IDF vectorizer
+
+**Note**: These output files are not tracked in git due to their large size (>100MB). Each team member should run `main.py` to generate them locally.
 
 ## Baseline Results
 
