@@ -1,0 +1,19 @@
+{
+  "input_csv": "outputs/clean_reviews.csv",
+  "num_rows": 50000,
+  "text_col": "review",
+  "label_col": "sentiment",
+  "split_col": null,
+  "split_value_counts": null,
+  "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_dim": 384,
+  "batch_size": 64,
+  "max_length": 256,
+  "normalize": false,
+  "output_embedding_file": "bert_embeddings.npy",
+  "dtype": "float32",
+  "alignment_rule": "row i in bert_embeddings.npy corresponds to row i in outputs/clean_reviews.csv",
+  "optional_pca": null,
+  "runtime_sec": 152.68,
+  "generated_at": "2025-12-19 07:06:46"
+}
