@@ -1,0 +1,5 @@
+Model,BestParams,Accuracy,Precision,Recall,F1
+LogReg,"{'clf__solver': 'liblinear', 'clf__C': 0.1}",0.8273,0.8259310894244174,0.8294,0.827661909989023
+LinearSVM,{'clf__C': 10},0.8259,0.8236345580933466,0.8294,0.8265072247135027
+XGBoost,"{'subsample': 1.0, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.8, 'early_stopping_rounds': 30, 'n_estimators(max)': 2000}",0.8188,0.8103582554517134,0.8324,0.8212312549329124
+RandomForest,"{'n_estimators': 400, 'min_samples_split': 5, 'max_features': 'sqrt', 'max_depth': 20}",0.786,0.770525917517972,0.8146,0.7919502236048999
