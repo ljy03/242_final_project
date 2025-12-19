@@ -86,3 +86,38 @@ The script outputs:
 - Text cleaning removes HTML, URLs, emails, and punctuation
 - TF-IDF uses both unigrams and bigrams by default
 - The model uses stratified splits to maintain class distribution
+  ## Classical ML Models on TF-IDF (IVO)
+
+In addition to the baseline Logistic Regression model, we evaluate multiple classical machine learning models trained on TF-IDF features to assess the effectiveness of different modeling approaches for text sentiment classification.
+
+### Models Evaluated
+Using the TF-IDF feature matrices generated in the baseline workflow, the following models are trained and compared:
+
+- Logistic Regression
+- Linear Support Vector Machine (Linear SVM)
+- Random Forest
+
+All models are evaluated using a consistent train/validation/test split.
+
+### Evaluation Metrics
+Model performance is assessed on the test set using:
+- Accuracy
+- Precision
+- Recall
+- F1 score
+- Confusion matrix
+- Training time
+
+An overfitting analysis is also conducted by comparing training, validation, and test performance.
+
+### Results Summary
+Among all TF-IDF–based models, **Linear SVM** achieves the best overall performance, obtaining the highest test-set F1 score while maintaining stable generalization and low computational cost. Tree-based models such as Random Forest exhibit strong training performance but suffer from overfitting due to the high-dimensional and sparse nature of TF-IDF features.
+
+### Outputs
+The comparison results of TF-IDF models are summarized in:
+- `outputs/tfidf_model_comparison.csv` (generated locally)
+
+### Implementation
+The implementation of TF-IDF classical model training and evaluation is provided in:
+
+
